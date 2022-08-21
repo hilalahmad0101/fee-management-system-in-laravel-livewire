@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Admin\ChangePassword;
 use App\Http\Livewire\Admin\Course;
 use App\Http\Livewire\Admin\Dashboard;
 use App\Http\Livewire\Admin\Fee;
@@ -33,4 +34,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/student-fees', StudentFee::class)->name('student-fee');
     Route::get('/payment', Payment::class)->name('payment');
     Route::get('/payment-report', PaymentReport::class)->name('payment-report');
+    Route::get('/changed-password', ChangePassword::class)->name('changed-password');
 });
